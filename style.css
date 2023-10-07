@@ -1,0 +1,236 @@
+:root{
+    --primary:#303028;
+    --red:#f81a1a;
+    --blackBackground:#393232;
+    --white:#ffffff;
+    --lightRed:#9e1a1a;
+    --background:#fff;
+    --grey:#3a3939;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+padding: 5px 10px;    
+display: flex;
+justify-content: space-around;
+align-items: center;
+color: var(--primary);
+background-color: var(--white);
+}
+
+.nav{
+    display: none;
+}
+
+.nav ul{
+    padding: 0;
+    display: flex;
+    gap: 40px;
+font-size: 20px;
+list-style: none;
+}
+.nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+.nav ul li a:hover{
+    color: #f81a1a;
+    text-decoration:underline;
+    text-underline-position: under;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.logo img{
+    width: 150px;
+    border-radius: 600px;
+}
+
+.logo-text{
+    font-size: 25px;
+   font-weight: 550;
+   color: var(--lightRed);
+   white-space:nowrap;
+}
+@media screen and (min-width:700px) {
+    .header{
+        padding: 10px 40px;
+    }.logo img{
+        width: 150px;
+    border-radius: 600px;
+    }
+    .nav{
+        display: block;
+    }
+    .mobileMenu,
+    .mobileNavigation{
+        display: none;
+        
+    }
+    
+}
+
+.mobileMenu{
+    font-size: 24px;
+}
+.mobileNavigation{
+    display: block;
+    width: 100%;
+    transform: translateX(100%);
+    transition:transform 0.5s;
+    position: fixed;
+    z-index: 10;
+    background-color: var(--background);
+}
+.mobileNavigation.active{
+    transform: translateX(0);
+}
+.mobileNavigation ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    padding-top: 20px;
+    background-color: var(--background);
+    color: var(--primary);
+}
+.mobileNavigation ul li a{
+    color: inherit;
+    text-decoration: none;
+    font-weight: 550;
+
+}
+
+.container{
+    padding: 7px 10px ;
+}
+.red{
+    color: red;
+}
+
+@media screen and (min-width:700px) {
+    .container{
+    padding: 10px 40px;
+    }
+    
+}
+.hero-section{
+    background-image: linear-gradient( to right, #09090911,#09090922);
+}
+.hero-section .container{
+padding-top: 30px;
+display: flex;
+
+
+}
+.hero-section .hero-left{
+padding: 10px;
+flex: 1;
+display: flex;
+flex-direction:column;
+
+justify-content: center;
+align-items: center;
+
+}
+
+.btn{
+    border: none;
+    color:white;
+    background-color: #9e1a1a;
+    padding: 5px 15px ;
+    font-size: 18px;
+    border-radius: 500px;
+    cursor: pointer;
+    width: 120px;
+    flex-direction: column;
+   
+    transition: transform 0.5s;
+}
+.btn:hover{
+    transform: scale(1.1);
+
+}
+.hero-section .hero-left h1{
+color: var(--primary);
+font-size: 80px;
+max-width: 600px;
+margin: 0;
+}
+.hero-right img{
+    margin-top: 40px;
+    width: 180;
+    height: 100%;
+    margin-right: 80px;
+
+}
+.hero-section.hero-left p{
+    color:var(--grey);
+    margin: 0;
+    margin-top: 10px;
+    max-width: 450px;
+}
+.hero-section.hero-left button{
+    background-color: #9e1a1a;
+    color: white;
+    margin: 15px 0;
+    width: 100px;
+    
+   transition: transform 0.5s;
+
+}
+
+.hero-section.hero-left button:hover{
+    transform: scale(1.1);
+   
+}
+.hero-section.hero-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.hero-section.hero-right img{
+  width: 100%;
+  max-width: 350px;
+
+}
+@media  screen and  (min-width: 700px){
+    .hero-section.container{
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    hero-section.hero-right img{
+        width: 100%;
+        max-width: 500px;
+      flex-direction: row;
+      }
+      .hero-section.hero-left h1{
+        max-width: 600px;
+        font-size: 50px;
+      }
+      .hero-section.hero-left p{
+        margin-bottom: 10px;
+      }
+      .hero-section.hero-left button{
+        border-radius: 50px;
+      }  
+}
+    
